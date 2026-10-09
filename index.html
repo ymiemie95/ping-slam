@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Ping-SLAM</title>
+<meta content="Ping-SLAM: real-time underwater SLAM for a low-cost mechanical scanning sonar. Supplementary video, results and datasets." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="Ping-SLAM: Real-Time Underwater SLAM for Low-Cost Mechanical Scanning Sonar" property="og:title"/>
+<meta content="Eighteen recordings in six underwater scenes. Trajectory error 42.5 to 90.5% below the released baseline, at 0.1 to 0.4% processing load." property="og:description"/>
+<meta content="https://ymiemie95.github.io/ping-slam/assets/video-poster.jpg" property="og:image"/>
+<meta content="https://ymiemie95.github.io/ping-slam/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="assets/site.css" rel="stylesheet"/><link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="https://ymiemie95.github.io/ping-slam/" rel="canonical"/><meta content="#081e2b" name="theme-color"/></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar"><nav aria-label="Main navigation" class="wrap nav">
+<a class="brand" href="#top"><svg aria-hidden="true" viewbox="0 0 36 36"><circle cx="18" cy="18" r="15"></circle><circle cx="18" cy="18" r="9"></circle><circle cx="18" cy="18" r="3"></circle><path d="M18 18 29 7"></path></svg>Ping-SLAM</a>
+<div class="navlinks"><a href="#video">Video</a><a href="#data">Datasets</a><a href="#system">Method</a><a href="#results">Results</a></div>
+</nav></header>
+<div class="hero" id="top"><div class="wrap">
+<p class="eyebrow">UNDERWATER ROBOTICS · RESEARCH PROJECT</p>
+<h1><span class="project-name">Ping<span>-</span>SLAM</span><span class="project-title">Real-Time Underwater SLAM for<br class="desktop-break"/> Low-Cost Mechanical Scanning Sonar</span></h1>
+<p class="authors">Fang Yang<sup>*</sup>, Haiming Gao<sup>*</sup>, Chen Peng, Zhikang Ge,
+     Wenwu Lu, Wenliang Jiang, Yibin Ying<sup>†</sup></p>
+<p class="afoot">* equal contribution     † corresponding author     manuscript under review</p>
+<div class="btns">
+<a class="btn primary" href="#video">
+<svg viewbox="0 0 24 24"><path d="M4 5h12a2 2 0 0 1 2 2v2.5l4-2.5v10l-4-2.5V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path></svg> Watch the video</a>
+<a class="btn" href="#results">
+<svg viewbox="0 0 24 24"><path d="M3 20h18v2H3zM5 10h3v8H5zm5.5-5h3v13h-3zM16 13h3v5h-3z"></path></svg>
+      Results</a>
+<a class="btn" href="#data">
+<svg viewbox="0 0 24 24"><path d="M12 3c4.97 0 9 1.34 9 3s-4.03 3-9 3-9-1.34-9-3 4.03-3 9-3zm9 6v3c0 1.66-4.03 3-9 3s-9-1.34-9-3V9c1.9 1.3 5.3 2 9 2s7.1-.7 9-2zm0 6v3c0 1.66-4.03 3-9 3s-9-1.34-9-3v-3c1.9 1.3 5.3 2 9 2s7.1-.7 9-2z"></path></svg>
+      Datasets</a>
+<a class="btn" href="#code">
+<svg viewbox="0 0 24 24"><path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"></path></svg> Code &amp; resources</a>
+</div>
+</div></div><main id="main"><section id="video"><div class="wrap"><div class="section-heading"><div><p class="kicker">01 / IN MOTION</p><h2>See the system in action.</h2><p class="lede">18 recordings. Six underwater scenes. One online pipeline.</p></div>
+ </div>
+<div class="player">
+<video aria-describedby="video-description" aria-label="Ping-SLAM supplementary video" controls="" id="demo-video" playsinline="" poster="assets/video-poster.jpg" preload="metadata">
+<source src="assets/supplementary.mp4" type="video/mp4"/>
+      Your browser cannot play this video.
+    <track kind="chapters" label="Video chapters" src="assets/chapters.vtt" srclang="en"/></video>
+<button aria-label="Play supplementary video" class="play-overlay" type="button"><span aria-hidden="true" class="play-symbol">▶</span><span>Watch supplementary video<small>01:21 · Full HD</small></span></button></div>
+<div class="video-bottom"><p id="video-description">Online mapping across all 18 recordings. Recorded data are replayed at 1×; the video is accelerated by the factor shown in each panel.</p><span class="video-spec">1080p <i>·</i> 01:21 <i>·</i> 7.8 MB</span></div>
+<div aria-label="Jump to a video chapter" class="chapters" role="group">
+<button data-time="0" type="button"><span>00:00</span>Introduction</button>
+<button data-time="5.5" type="button"><span>00:05</span>Platform &amp; scenes</button>
+<button data-time="14" type="button"><span>00:14</span>System</button>
+<button data-time="24.2" type="button"><span>00:24</span>Online mapping</button>
+<button data-time="53.5" type="button"><span>00:53</span>Maps</button>
+<button data-time="63" type="button"><span>01:03</span>Results</button>
+</div>
+</div></section><section id="abstract"><div class="wrap">
+<p class="kicker">02 / OVERVIEW</p><h2>A sparse scan. A complete SLAM system.</h2><div class="tiles">
+<div class="tile"><b>42.5–90.5%</b><span>lower trajectory error than the released baseline, on each of the 14 referenced recordings</span></div>
+<div class="tile"><b>79.0 / 77.7%</b><span>map boundary completeness and precision, against 68.1 / 54.8% released</span></div>
+<div class="tile"><b>17 of 18</b><span>recordings yield a usable map, against 11 and 10 for the two baselines</span></div>
+<div class="tile"><b>0.1–0.4%</b><span>processing load, against 7.7–48.0% for the re-tuned baseline</span></div>
+</div>
+<p>Mechanical scanning sonar acquires one beam at a time. During a slow sweep, vehicle motion distorts the observation and sparse returns complicate registration. Ping-SLAM turns these asynchronous measurements into geometric scans for online localization and mapping.</p>
+<p>DVL/IMU odometry aligns the beams, while angular accumulation and spatial filtering form wide-field-of-view pseudo scans. Correlative matching supplies sequential, near-link, and loop constraints to a sparse pose graph, which corrects the trajectory and supports occupancy mapping.</p>
+</div></section><section id="system"><div class="wrap">
+<p class="kicker">03 / METHOD</p><h2>From beams to a coherent map.</h2>
+<p class="lede">From asynchronous beams to an optimized pose graph.</p>
+<figure>
+<button aria-label="Enlarge: Pipeline: sensor inputs, pseudo scan construction, scan matching and pose graph, trajectory and occupancy map" class="figure-zoom" type="button"><img alt="Pipeline: sensor inputs, pseudo scan construction, scan matching and pose graph, trajectory and occupancy map" decoding="async" height="1012" loading="lazy" src="assets/framework.jpg" width="1800"/><span aria-hidden="true" class="zoom-hint">↗</span></button>
+<figcaption>A Ping360 sonar, an IMU and a DVL feed echo extraction and a
+    sliding-window accumulation that aligns every beam to the newest one. Spatial filtering and scan
+    gating produce a sparse pseudo scan, which correlative matching and pose-graph optimization turn
+    into a trajectory and an occupancy map.</figcaption>
+</figure>
+<h3>Contributions</h3>
+<ol class="contrib">
+<li><div><b>Sonar front end</b>Converts asynchronous beam-wise returns into motion-compensated sparse geometric scans.</div></li>
+<li><div><b>Online SLAM system</b>Integrates that front end with constraint acceptance rules adapted to acoustic match responses.</div></li>
+<li><div><b>Geometric evaluation protocol</b>Scores occupancy and echo-intensity maps against known boundaries, with range coverage and threshold selection specified, together with recordings from four new underwater scenes.</div></li>
+</ol>
+</div></section><section id="results"><div class="wrap">
+<p class="kicker">04 / EVALUATION</p><h2>Measured across real underwater scenes.</h2>
+<p class="lede">Compared with the released SSF system and its re-tuned variant. Results are reported per recording.</p>
+<h3>Map geometry</h3>
+<p>A map is scored against the known boundary of the scene. Completeness is the share of the true
+  boundary the map recovers, precision the share of mapped wall cells that fall on it. Echo-intensity
+  maps are cut at the threshold that favours them most, so the comparison does not hinge on a choice
+  we made for the baseline.</p>
+<p class="note comparison-note">Ping-SLAM has lower RMSE than the released baseline on all 14 reference recordings and the re-tuned baseline on 10 of 14. The re-tuned baseline performs better on P1, P2, P4, and P9.</p>
+<div class="eval-tables" style="display:block"><div aria-label="Translational ATE RMSE (m), with rigid alignment in the horizontal plane. Lower is better; the best result in each row is highlighted." class="tbl" role="region" style="display:block;width:100%;margin-bottom:18px" tabindex="0"><table>
+<caption>Translational ATE RMSE (m), with rigid alignment in the horizontal plane. Lower is better; the best result in each row is highlighted.</caption>
+<thead><tr><th>Recording</th><th>Ping-SLAM</th><th>SSF re-tuned</th><th>SSF released</th></tr></thead>
+<tbody>
+<tr class="group"><td colspan="4">Public benchmark, motion-capture reference</td></tr>
+<tr><td>P1</td><td>0.175</td><td class="best">0.160</td><td>0.438</td></tr>
+<tr><td>P2</td><td>0.389</td><td class="best">0.150</td><td>0.708</td></tr>
+<tr><td>P3</td><td class="best">0.091</td><td>0.129</td><td>0.296</td></tr>
+<tr><td>P4</td><td>0.151</td><td class="best">0.124</td><td>0.410</td></tr>
+<tr><td>P5</td><td class="best">0.470</td><td>1.977</td><td>2.710</td></tr>
+<tr><td>P6</td><td class="best">0.454</td><td>3.522</td><td>2.560</td></tr>
+<tr><td>P7</td><td class="best">1.033</td><td>3.625</td><td>2.094</td></tr>
+<tr><td>P8</td><td class="best">1.036</td><td>3.836</td><td>3.292</td></tr>
+<tr><td>P9</td><td>0.099</td><td class="best">0.081</td><td>0.451</td></tr>
+<tr><td>P10</td><td class="best">0.410</td><td>1.044</td><td>1.246</td></tr>
+<tr><td>P11</td><td class="best">0.116</td><td>0.118</td><td>0.316</td></tr>
+<tr><td>P12</td><td class="best">0.071</td><td>0.074</td><td>0.210</td></tr>
+<tr><td>P13</td><td class="best">0.307</td><td>0.817</td><td>3.247</td></tr>
+<tr class="group"><td colspan="4">Field water, TagSLAM reference</td></tr>
+<tr><td>F1</td><td class="best">0.072</td><td>0.079</td><td>0.125</td></tr>
+</tbody>
+</table></div>
+<div aria-label="Boundary completeness and precision in percent, on the nine recordings all three systems mapped. Higher is better." class="tbl" role="region" style="display:block;width:100%" tabindex="0"><table>
+<caption>Boundary completeness and precision in percent, on the nine recordings all three systems mapped. Higher is better.</caption>
+<thead><tr><th>Recording</th><th>Ours compl.</th><th>Ours prec.</th><th>Tuned compl.</th><th>Tuned prec.</th><th>Released compl.</th><th>Released prec.</th></tr></thead>
+<tbody>
+<tr><td>P1</td><td class="best">79.8</td><td class="best">74.8</td><td>71.6</td><td>70.2</td><td>60.6</td><td>63.7</td></tr>
+<tr><td>P2</td><td>78.7</td><td class="best">81.1</td><td>78.9</td><td>66.3</td><td class="best">90.3</td><td>30.4</td></tr>
+<tr><td>P3</td><td class="best">85.3</td><td class="best">80.4</td><td>75.8</td><td>76.8</td><td>69.8</td><td>70.0</td></tr>
+<tr><td>P4</td><td>73.7</td><td class="best">85.6</td><td>75.5</td><td>68.5</td><td class="best">77.3</td><td>63.0</td></tr>
+<tr><td>P9</td><td class="best">84.6</td><td class="best">85.5</td><td>72.8</td><td>83.5</td><td>64.9</td><td>48.0</td></tr>
+<tr><td>P10</td><td class="best">51.0</td><td class="best">54.7</td><td>42.9</td><td>14.2</td><td>28.5</td><td>15.7</td></tr>
+<tr><td>P11</td><td class="best">92.5</td><td class="best">75.2</td><td>72.7</td><td>74.5</td><td>70.9</td><td>66.3</td></tr>
+<tr><td>P12</td><td>68.3</td><td class="best">82.9</td><td>66.0</td><td>77.3</td><td class="best">69.2</td><td>66.2</td></tr>
+<tr><td>F1</td><td class="best">97.2</td><td class="best">78.8</td><td>81.0</td><td>66.5</td><td>81.8</td><td>69.9</td></tr>
+<tr class="sum"><td>Mean</td><td>79.0</td><td>77.7</td><td>70.8</td><td>66.4</td><td>68.1</td><td>54.8</td></tr>
+<tr class="sum"><td>Usable maps, of 18</td><td colspan="2">17</td><td colspan="2">11</td><td colspan="2">10</td></tr>
+</tbody>
+ </table></div></div>
+<h3>Trajectories</h3>
+<div class="plots">
+<div class="trajectory-card"><b>(a) P3</b><button aria-label="Enlarge: P3 trajectory" class="figure-zoom" type="button"><img alt="P3 trajectory" decoding="async" loading="lazy" src="assets/traj_P3.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button><button aria-label="Enlarge: P3 translational error" class="figure-zoom" type="button"><img alt="P3 translational error over time" decoding="async" loading="lazy" src="assets/err_P3.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button></div>
+<div class="trajectory-card"><b>(b) P5</b><button aria-label="Enlarge: P5 trajectory" class="figure-zoom" type="button"><img alt="P5 trajectory" decoding="async" loading="lazy" src="assets/traj_P5.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button><button aria-label="Enlarge: P5 translational error" class="figure-zoom" type="button"><img alt="P5 translational error over time" decoding="async" loading="lazy" src="assets/err_P5.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button></div>
+<div class="trajectory-card"><b>(c) P6</b><button aria-label="Enlarge: P6 trajectory" class="figure-zoom" type="button"><img alt="P6 trajectory" decoding="async" loading="lazy" src="assets/traj_P6.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button><button aria-label="Enlarge: P6 translational error" class="figure-zoom" type="button"><img alt="P6 translational error over time" decoding="async" loading="lazy" src="assets/err_P6.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button></div>
+<div class="trajectory-card"><b>(d) P7</b><button aria-label="Enlarge: P7 trajectory" class="figure-zoom" type="button"><img alt="P7 trajectory" decoding="async" loading="lazy" src="assets/traj_P7.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button><button aria-label="Enlarge: P7 translational error" class="figure-zoom" type="button"><img alt="P7 translational error over time" decoding="async" loading="lazy" src="assets/err_P7.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button></div>
+<div class="trajectory-card"><b>(e) P10</b><button aria-label="Enlarge: P10 trajectory" class="figure-zoom" type="button"><img alt="P10 trajectory" decoding="async" loading="lazy" src="assets/traj_P10.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button><button aria-label="Enlarge: P10 translational error" class="figure-zoom" type="button"><img alt="P10 translational error over time" decoding="async" loading="lazy" src="assets/err_P10.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button></div>
+<div class="trajectory-card"><b>(f) P12</b><button aria-label="Enlarge: P12 trajectory" class="figure-zoom" type="button"><img alt="P12 trajectory" decoding="async" loading="lazy" src="assets/traj_P12.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button><button aria-label="Enlarge: P12 translational error" class="figure-zoom" type="button"><img alt="P12 translational error over time" decoding="async" loading="lazy" src="assets/err_P12.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button></div>
+<div class="trajectory-card"><b>(g) P13</b><button aria-label="Enlarge: P13 trajectory" class="figure-zoom" type="button"><img alt="P13 trajectory" decoding="async" loading="lazy" src="assets/traj_P13.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button><button aria-label="Enlarge: P13 translational error" class="figure-zoom" type="button"><img alt="P13 translational error over time" decoding="async" loading="lazy" src="assets/err_P13.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button></div>
+<div class="trajectory-card"><b>(h) F1</b><button aria-label="Enlarge: F1 trajectory" class="figure-zoom" type="button"><img alt="F1 trajectory" decoding="async" loading="lazy" src="assets/traj_F1.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button><button aria-label="Enlarge: F1 translational error" class="figure-zoom" type="button"><img alt="F1 translational error over time" decoding="async" loading="lazy" src="assets/err_F1.png"/><span aria-hidden="true" class="zoom-hint">↗</span></button></div>
+</div>
+<img class="trajectory-legend" src="assets/traj_legend.png" alt="Ground truth, Ping-SLAM, SOFFT-SLAM, start, end, and RMSE legend" loading="lazy"/>
+<p class="note" style="margin-top:13px">The eight panels reproduce Fig. 8 of the paper: P3, P5, P6, P7, P10, P12, P13, and F1. Each panel shows the trajectory above and translational error below.</p>
+<h3>Runtime</h3>
+<p>Processing load is the share of the recording duration spent computing. Ping-SLAM stays between
+  0.1% and 0.4% across all eighteen recordings. The re-tuned baseline ranges from 7.7% to 48.0%. Both
+  keep up with a 1× replay, but the margin differs by two orders of magnitude.</p>
+</div></section><section id="maps"><div class="wrap">
+<p class="kicker">05 / RECONSTRUCTION</p><h2>Constructed Maps</h2>
+<p class="lede">Every recording, every system, same rendering.</p>
+<figure>
+<button aria-label="Enlarge: Occupancy and echo maps with trajectories for all eighteen recordings" class="figure-zoom" type="button"><img alt="Occupancy and echo maps with trajectories for all eighteen recordings" decoding="async" height="1366" loading="lazy" src="assets/maps_all.png" width="2147"/><span aria-hidden="true" class="zoom-hint">↗</span></button>
+<figcaption>Occupancy and echo maps with trajectories for all eighteen recordings.</figcaption>
+</figure>
+</div></section><section id="data"><div class="wrap">
+<p class="kicker">06 / DATASETS</p><h2>From a laboratory pool to field waters.</h2>
+<p class="lede">Eighteen recordings, six scenes, sonar ranges from 3 to 30 metres.</p>
+<div class="duo">
+<figure>
+<button aria-label="Enlarge: Photographs of the six evaluation scenes" class="figure-zoom" type="button"><img alt="Photographs of the six evaluation scenes" decoding="async" height="790" loading="lazy" src="assets/scenes.jpg" width="1300"/><span aria-hidden="true" class="zoom-hint">↗</span></button>
+<figcaption>The saltwater test basin that hosts P1 to P13, the flooded
+      bunker B1, and the four waters recorded with our own platform: the laboratory pool F1, the pond
+      F2, and the two tiled pools F3 and F4.</figcaption>
+</figure>
+<figure>
+<button aria-label="Enlarge: The vehicle, operator laptop and tether reel at the pond" class="figure-zoom" type="button"><img alt="The vehicle, operator laptop and tether reel at the pond" decoding="async" height="900" loading="lazy" src="assets/platform.jpg" width="1200"/><span aria-hidden="true" class="zoom-hint">↗</span></button>
+<figcaption>Deployment at the pond. The BlueROV2 carries a Ping360 mechanical scanning sonar, a Doppler velocity log, and an inertial measurement unit.</figcaption>
+</figure>
+</div>
+<h3>Availability</h3>
+<p class="note">P1 to P13 are the Bremen mechanical scanning sonar benchmark by Hansen, Belenis,
+  Bande Firvida, Creutz and Birk, <a href="https://doi.org/10.1109/ACCESS.2024.3420766">IEEE Access
+  2024</a>. B1 is the flooded bunker recording released with the SSF work of Hansen and Birk,
+  <a href="https://doi.org/10.1109/ICRA57147.2024.10609976">ICRA 2024</a>. F1 to F4 are new and will
+  be released with the paper, together with the evaluation scripts and the per-recording
+  configurations.</p>
+</div></section><section id="code"><div class="wrap">
+<p class="kicker">07 / RESOURCES</p><h2>Built for reproducible research.</h2>
+<div class="pending"><b>Code and field datasets — planned release</b><p>The ROS 2 implementation, four self-collected datasets, evaluation tools, and per-recording configurations will be linked here upon publication.</p></div>
+</div></section></main>
+<footer><div class="wrap footer-row"><a class="footer-brand" href="#top">Ping-SLAM<span>Underwater localization &amp; mapping</span></a><p>Baseline: SSF by Hansen and Birk.<br/>Pose-graph back end built on SLAM Toolbox.</p><a class="back-top" href="#top">Back to top ↑</a></div></footer>
+<dialog aria-label="Enlarged research figure" id="figure-dialog"><button aria-label="Close enlarged figure" class="dialog-close" type="button">Close ×</button><img alt=""/><p></p></dialog><script defer="" src="assets/site.js"></script><script>document.querySelectorAll('.trajectory-card img').forEach((img) => { if (!img.src.includes('v=fig8')) img.src += '?v=fig8'; }); const sectionLabels={data:'02 / DATASETS',system:'03 / METHOD',abstract:'04 / OVERVIEW',results:'05 / EVALUATION',maps:'06 / RECONSTRUCTION',code:'07 / RESOURCES'}; Object.entries(sectionLabels).forEach(([id,label]) => { const kicker=document.querySelector('#'+id+' .kicker'); if (kicker) kicker.textContent=label; });</script></body>
+</html>
+<script>const wording={video:['SUPPLEMENTARY VIDEO','Supplementary Video'],results:['EVALUATION','Experimental Results'],maps:['RECONSTRUCTION','Occupancy and Echo Maps'],data:['DATASETS','Datasets and Sensor Setup']}; Object.entries(wording).forEach(([id,[kicker,title]])=>{const s=document.querySelector('#'+id); if(s){const k=s.querySelector('.kicker');const h=s.querySelector('h2');if(k)k.textContent=kicker;if(h)h.textContent=title;}}); const result=document.querySelector('#results'); if(result){const hs=result.querySelectorAll('h3'); if(hs[0])hs[0].textContent='Map Quality'; if(hs[1])hs[1].textContent='Trajectory Accuracy';}</script>
